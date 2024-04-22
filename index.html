@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Frontend Mentor | Interactive card details form</title>
+
+        <style>
+            :root,
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Space Grotesk;
+            }
+            .container {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                min-height: 100dvh;
+                padding: 0;
+            }
+            .left-side {
+                position: relative;
+            }
+            .side-pic {
+                max-height: 100dvh;
+            }
+            .front-card {
+                top: 3rem;
+                left: 8rem;
+                position: absolute;
+            }
+            .back-card {
+                top: 20rem;
+                left: 14rem;
+                position: absolute;
+            }
+            .cardholder {
+                width: 10rem;
+                left: 100rem;
+            }
+            .card-num-example {
+                position: absolute;
+                top: 9rem;
+                left: 2.5rem;
+                font-size: 2rem;
+                color: white;
+            }
+            .owner-name {
+                position: absolute;
+                top: 12.5rem;
+                left: 2.5rem;
+                font-size: 0.8rem;
+                font-weight: 20px;
+                color: white;
+            }
+            .expiry-date-example {
+                position: absolute;
+                top: 12.5rem;
+                left: 23rem;
+                font-size: 0.8rem;
+                color: white;
+            }
+            .cvc-num-example {
+                position: absolute;
+                top: 7rem;
+                left: 23rem;
+                color: white;
+            }
+            .right-side {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                width: 500dvh;
+            }
+            .exp-cvc {
+                display: flex;
+                flex-direction: row;
+                font-size: 0.5rem;
+                font-weight: bolder;
+                letter-spacing: 0.5dvh;
+                margin-top: 1rem;
+                margin-left: 0.25rem;
+                margin-bottom: 0.5rem;
+                margin-right: 0.5rem;
+            }
+            .cardholder {
+                height: 2rem;
+                font-size: 0.8rem;
+                padding-left: 0.5rem;
+                margin-left: 5.5rem;
+                width: 15.5rem;
+            }
+            .cardholder-name {
+                font-size: 0.5rem;
+                font-weight: bolder;
+                letter-spacing: 0.5dvh;
+                margin-bottom: 0.5rem;
+                margin-right: 2rem;
+                color: hsl(278, 68%, 11%);
+            }
+            .card-number {
+                font-size: 0.5rem;
+                font-weight: bolder;
+                letter-spacing: 0.5dvh;
+                color: hsl(278, 68%, 11%);
+                margin-top: 1rem;
+                margin-bottom: 0.5rem;
+                margin-right: 3.8rem;
+            }
+            .cardnumber {
+                height: 2rem;
+                font-weight: 0.8rem;
+                color: hsl(279, 6%, 55%);
+                margin-left: 5.5rem;
+                width: 15.5rem;
+                padding-left: 0.3rem;
+            }
+            .month {
+                height: 2rem;
+                width: 2.5rem;
+                font-size: 0.8rem;
+                text-align: center;
+                margin-left: 5.3rem;
+                margin-right: 0.8rem;
+            }
+            .year {
+                height: 2rem;
+                width: 2.5rem;
+                font-size: 0.8rem;
+                text-align: center;
+                margin-right: 0.8rem;
+            }
+            .cvc {
+                height: 2rem;
+                width: 8.5rem;
+                padding-left: 0.3rem;
+            }
+            .confirm {
+                background-color: hsl(278, 68%, 11%);
+                color: white;
+                border-color: hsl(278, 68%, 11%);
+                width: 10rem;
+                height: 2rem;
+                border-radius: 0.25rem;
+                border-style: solid;
+                margin-top: 2rem;
+                margin-left: 5.5rem;
+                width: 15.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container">
+            <div class="left-side">
+                <img class="side-pic" src="images/bg-main-desktop.png" />
+                <div class="front-card">
+                    <img src="images/bg-card-front.png" alt="front-card" />
+                    <svg
+                        width="84"
+                        height="47"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="position: absolute; left: 2.2rem; top: 2rem"
+                    >
+                        <ellipse
+                            cx="23.478"
+                            cy="23.5"
+                            rx="23.478"
+                            ry="23.5"
+                            fill="#fff"
+                        />
+                        <path
+                            d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+                            stroke="#fff"
+                        />
+                    </svg>
+                    <p class="card-num-example">0000 0000 0000 0000</p>
+                    <p class="owner-name">JANE APPLESEED</p>
+                    <p class="expiry-date-example">00/00</p>
+                </div>
+                <div class="back-card">
+                    <img src="images/bg-card-back.png" />
+                    <p class="cvc-num-example">000</p>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <p class="cardholder-name">CARDHOLDER NAME</p>
+                <input
+                    name="cardholder"
+                    class="cardholder"
+                    placeholder="e.g. Jane Appleseed"
+                />
+                <p class="card-number">CARD NUMBER</p>
+                <input
+                    name="cardnumber"
+                    class="cardnumber"
+                    placeholder=" e.g. 1234 5678 9123 0000"
+                />
+                <div class="exp-cvc">
+                    <p class="exp-date">EXP.DATE(MM/YY)</p>
+
+                    <p class="cvc-number">CVC</p>
+                </div>
+                <div class="text-box">
+                    <input name="MM" class="month" placeholder="MM" />
+                    <input name="YY" class="year" placeholder="YY" />
+                    <input name="CVC" class="cvc" placeholder=" e.g. 123" />
+                </div>
+
+                <button class="confirm">Confirm</button>
+            </div>
+        </main>
+    </body>
+</html>
